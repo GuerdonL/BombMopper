@@ -1,39 +1,59 @@
 body {
-  margin: 40px;
-  background: #111;
+    margin: 40px;
+    /* background: #111; */
+    background: #111;
 }
-#game_area {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 3%;
+#main_frame {
+    /* background: slightly transparent black */
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 30px;
+
+    /* center on page accounting for element size*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    /* flex box, column. Space elements out a bit */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1em;
+
 }
-.bright_div {
-  border: solid 2px white;
-  border-radius: 5px;
+.game_button {
+    /* make the button pretty */
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 7px;
+    background-color: #afafaf;
+    box-shadow: 0 9px #737373;
+    /* on hover, darken the button */
 }
-#player_area {
-  aspect-ratio: 1;
+#new_game {
+    background-color: #4CAF50;
+    box-shadow: 0 9px #337736;
 }
-#opponents {
-  display: grid;
-  grid-template-columns: 50% 50%;
+#versus_game {
+    background-color: #4c57af;
+    box-shadow: 0 9px #334577;
 }
-.opponent {
-  aspect-ratio: 1;
+#race_game {
+    background-color: #af564c;
+    box-shadow: 0 9px #773b33;
 }
-@media screen and (max-width: 800px) {
-  #opponents {
-    grid-template-columns: 100%;
-  }
-  #game_area {
-    grid-template-columns: 80% 20%;
-  }
+#puzzle_game {
+    background-color: #9b4caf;
+    box-shadow: 0 9px #743377;
 }
-@media screen and (max-width: 525px) {
-  #opponents {
-    grid-template-columns: 25% 25% 25% 25%;
-  }
-  #game_area {
-    grid-template-columns: 100%;
-  }
+/* on hover, highlight the button*/
+.game_button:hover {
+    border: 3px solid #fff;
 }

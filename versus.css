@@ -1,0 +1,39 @@
+body {
+  margin: 40px;
+  background: #111;
+}
+#game_area {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 3%;
+}
+.bright_div {
+  border: solid 2px white;
+  border-radius: 5px;
+}
+#player_area {
+  aspect-ratio: 1;
+}
+#opponents {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.opponent {
+  aspect-ratio: 1;
+}
+@media screen and (max-width: 800px) {
+  #opponents {
+    grid-template-columns: 100%;
+  }
+  #game_area {
+    grid-template-columns: 20% 80%;
+  }
+}
+@media screen and (max-width: 525px) {
+  #opponents {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  #game_area {
+    grid-template-columns: 100%;
+  }
+}
