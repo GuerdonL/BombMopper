@@ -1,6 +1,5 @@
 body {
     margin: 40px;
-    /* background: #111; */
     background: #111;
 }
 #main_frame {
@@ -20,7 +19,6 @@ body {
     flex-direction: column;
     justify-content: space-around;
     gap: 1em;
-
 }
 .game_button {
     /* make the button pretty */
@@ -35,7 +33,6 @@ body {
     border-radius: 7px;
     background-color: #afafaf;
     box-shadow: 0 9px #737373;
-    /* on hover, darken the button */
 }
 #new_game {
     background-color: #4CAF50;
